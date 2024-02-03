@@ -1,22 +1,6 @@
-﻿int[] array = { 11, 22, 33, 44, 55, 66, 77, 88, 99 };
-int numberForSearch = 44;
-bool isFound = false;
-
+﻿int[] array = { -1, -2, -3, -4, 0, 1, 2, 3, 4, 5 };
 for (int i = 0; i < array.Length; i++)
 {
-    if (numberForSearch == array[i])
-    {
-        isFound = true;
-        //Console.WriteLine("да");
-        break;
-    }
-
+    array[i] *= -1;
 }
-if (isFound)
-{
-    Console.WriteLine("да");
-}
-else
-{
-    Console.WriteLine("нет");
-}
+Console.WriteLine($"Массив: [ {string.Join("; ", array)} ]");
